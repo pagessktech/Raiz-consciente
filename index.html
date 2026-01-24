@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raíz Consciente - Alimentación & Microbiota</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5F7F6A',
+                        secondary: '#9DB8A0',
+                        dark: '#000000',
+                        body: '#2B2B2B',
+                        white: '#FFFFFF',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .section { display: none; }
+        .section.active { display: block; animation: fadeIn 0.4s ease-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .nav-link.active { color: #5F7F6A; font-weight: 600; }
+        
+        /* Estilos para ocultar el preloader */
+        .fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-white text-body flex flex-col min-h-screen overflow-hidden"> 
+<!-- Agregué overflow-hidden al body inicialmente para evitar scroll durante la carga -->
+
+    <!-- PRELOADER -->
+    <div id="preloader" class="fixed inset-0 bg-white z-[100] flex flex-col items-center justify-center transition-opacity duration-700">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-6xl text-primary font-serif mb-2 tracking-tight animate-pulse">Raíz Consciente</h1>
+            <p class="text-secondary text-xs md:text-sm uppercase tracking-widest font-medium">Alimentación & Microbiota</p>
+        </div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 shadow-sm">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" onclick="showSection('home'); return false;" class="text-2xl font-bold text-primary tracking-tight hover:opacity-80 transition">M.</a>
+            
+            <div class="space-x-6 text-sm font-medium">
+                <a href="#" id="nav-home" onclick="showSection('home'); return false;" class="nav-link transition text-body hover:text-primary active">Inicio</a>
+                <a href="#" id="nav-productos" onclick="showSection('productos-lista'); return false;" class="nav-link transition text-body hover:text-primary">Productos</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex-grow">
+        
+        <!-- SECCIÓN: INICIO (HOME) -->
+        <main id="home" class="section active">
+            <section class="max-w-md md:max-w-5xl mx-auto px-6 py-12 md:py-20 text-center">
+                <div class="inline-block p-2 border border-secondary/30 rounded-full mb-6">
+                    <span class="text-secondary font-semibold tracking-widest uppercase text-xs px-2">Bienestar Interior</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl mb-6 text-dark leading-tight">Alimentación consciente <br/> para sanar tu microbiota</h1>
+                
+                <div class="text-body max-w-2xl mx-auto leading-relaxed text-lg mb-10 space-y-4 text-left md:text-center">
+                    <p>Raíz Consciente es volver a la base. A escuchar el cuerpo, entender la digestión, la microbiota y los mensajes que aparecen cuando algo no está en equilibrio.</p>
+                    <p>Para mí, Raíz Consciente significa dejar de pelear con la comida y empezar a usarla como aliada. Significa hábitos simples, sostenibles y reales.</p>
+                    <p>Significa sanar desde adentro, sin exigencias extremas ni promesas vacías. Y espero que Raíz Consciente sea para vos un espacio de claridad, calma y cambio posible.</p>
+                </div>
+
+                <div class="mb-12">
+                    <button onclick="showSection('productos-lista')" class="bg-primary text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg shadow-primary/30 hover:bg-[#4a6353] hover:scale-105 transition transform duration-300 w-full md:w-auto">
+                        Ver Mis Productos
+                    </button>
+                </div>
+
+                <div class="rounded-2xl overflow-hidden shadow-xl max-w-md md:max-w-3xl mx-auto relative group border border-gray-100">
+                   <img src="https://res.cloudinary.com/dgyjeotoa/image/upload/v1769219242/WhatsApp_Image_2026-01-23_at_22.26.40_gko5ql.jpg" 
+                        alt="Raíz Consciente" 
+                        class="w-full h-auto object-cover group-hover:scale-105 transition duration-700">
+                </div>
+            </section>
+        </main>
+
+        <!-- SECCIÓN: LISTA DE PRODUCTOS -->
+        <div id="productos-lista" class="section">
+            <div class="max-w-5xl mx-auto px-6 py-12">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-dark mb-2">Mis Propuestas</h2>
+                    <p class="text-secondary">Herramientas para tu camino de bienestar</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Tarjeta Producto 1: Desafío -->
+                    <div class="bg-white p-6 md:p-8 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition duration-300 flex flex-col">
+                        <div class="h-48 rounded-xl mb-6 overflow-hidden">
+                            <img src="https://res.cloudinary.com/dgyjeotoa/image/upload/v1769219596/producto_1_ovtpci.jpg" alt="Plan Desafío" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-dark">Plan / Desafío 14 días</h3>
+                        <p class="text-body mb-8 leading-relaxed flex-grow text-sm md:text-base">Una guía práctica para empezar a mejorar la digestión, bajar inflamación y ordenar hábitos desde la raíz.</p>
+                        <button onclick="showSection('producto1')" class="w-full py-3 rounded-lg border border-primary text-primary font-semibold hover:bg-primary hover:text-white transition flex justify-center items-center group">
+                            Ver detalles 
+                            <span class="ml-2 group-hover:translate-x-1 transition">→</span>
+                        </button>
+                    </div>
+
+                    <!-- Tarjeta Producto 2: Recetario -->
+                    <div class="bg-white p-6 md:p-8 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition duration-300 flex flex-col">
+                        <div class="h-48 rounded-xl mb-6 overflow-hidden">
+                            <img src="https://res.cloudinary.com/dgyjeotoa/image/upload/v1769219596/producto_2_pxvnox.jpg" alt="Recetario Microbiota" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-dark">Recetario / Ebook</h3>
+                        <p class="text-body mb-8 leading-relaxed flex-grow text-sm md:text-base">Recetas simples, reales y pensadas para acompañar la digestión sin complicaciones.</p>
+                        <button onclick="showSection('producto2')" class="w-full py-3 rounded-lg border border-secondary text-secondary font-semibold hover:bg-secondary hover:text-white transition flex justify-center items-center group">
+                            Ver detalles 
+                            <span class="ml-2 group-hover:translate-x-1 transition">→</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DETALLE: PLAN 14 DÍAS -->
+        <div id="producto1" class="section max-w-3xl mx-auto px-6 py-8 md:py-12">
+            <button onclick="showSection('productos-lista')" class="mb-8 flex items-center text-secondary hover:text-primary transition font-medium">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+                Volver a Productos
+            </button>
+            
+            <div class="bg-white rounded-3xl p-6 md:p-12 shadow-md border border-gray-100">
+                <span class="text-secondary font-bold tracking-wide text-xs md:text-sm uppercase">Guía Práctica</span>
+                <h2 class="text-3xl md:text-5xl mt-2 mb-6 text-dark leading-tight">Plan / Desafío 14 días</h2>
+                
+                <div class="rounded-xl overflow-hidden mb-8 shadow-sm">
+                    <img src="https://res.cloudinary.com/dgyjeotoa/image/upload/v1769219596/producto_1_ovtpci.jpg" alt="Desafío" class="w-full object-cover">
+                </div>
+
+                <div class="prose prose-stone prose-lg text-body leading-relaxed mb-10 text-sm md:text-base space-y-4">
+                    <p class="font-semibold text-lg text-primary">14 días alimentando tu microbiota es una guía práctica para empezar a mejorar la digestión, bajar inflamación y ordenar hábitos desde la raíz.</p>
+                    <p>Durante dos semanas vas a incorporar, día a día, pequeñas acciones conscientes: alimentación, pausas, respiración y rutinas que ayudan a que el intestino funcione mejor, sin extremos ni exigencias.</p>
+                    <p>No es una dieta. Es un comienzo posible, real y sostenible.</p>
+                    <p class="text-primary italic mt-4">— Raíz Consciente · Luciana Barbosa</p>
+
+                    <h4 class="text-xl font-bold text-dark mt-8 mb-4">Qué incluye:</h4>
+                    <ul class="list-disc pl-5 space-y-2 marker:text-primary">
+                        <li>Guía día por día (14 días)</li>
+                        <li>Tips simples y aplicables</li>
+                        <li>Momentos de pausa y respiración consciente</li>
+                        <li>Anexos para registrar sensaciones y hábitos</li>
+                        <li>Material en formato digital</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="text-center md:text-left">
+                        <p class="text-sm text-secondary mb-1">Inversión</p>
+                        <p class="text-3xl font-bold text-dark">$8.500 <span class="text-base font-normal text-secondary">ARS</span></p>
+                    </div>
+                    <!-- Vincular aquí el link de Mercado Pago del Desafío -->
+                    <a href="https://mpago.la/13Tuf6Q" target="_blank" class="w-full md:w-auto px-8 py-4 bg-primary text-white rounded-xl font-bold hover:bg-[#4a6353] transition shadow-lg text-center">
+                        Unirme al Desafío
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- DETALLE: RECETARIO -->
+        <div id="producto2" class="section max-w-3xl mx-auto px-6 py-8 md:py-12">
+            <button onclick="showSection('productos-lista')" class="mb-8 flex items-center text-secondary hover:text-primary transition font-medium">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+                Volver a Productos
+            </button>
+            
+            <div class="bg-white rounded-3xl p-6 md:p-12 shadow-md border border-gray-100">
+                <span class="text-secondary font-bold tracking-wide text-xs md:text-sm uppercase">Recetario Digital</span>
+                <h2 class="text-3xl md:text-5xl mt-2 mb-6 text-dark leading-tight">Recetario / Ebook</h2>
+                
+                <div class="rounded-xl overflow-hidden mb-8 shadow-sm">
+                    <img src="https://res.cloudinary.com/dgyjeotoa/image/upload/v1769219596/producto_2_pxvnox.jpg" alt="Recetario" class="w-full object-cover">
+                </div>
+
+                <div class="prose prose-stone prose-lg text-body leading-relaxed mb-10 text-sm md:text-base space-y-4">
+                    <p class="font-semibold text-lg text-secondary">Raíz Consciente – Recetario para tu microbiota reúne recetas simples, reales y pensadas para acompañar la digestión sin complicaciones.</p>
+                    <p>No se trata de comer perfecto, sino de elegir preparaciones que nutran desde adentro, respetando el ritmo del cuerpo y el día a día.</p>
+                    <p>Un recetario para cocinar con calma, conciencia y sentido.</p>
+                    <p class="text-primary italic mt-4">— Raíz Consciente · Luciana Barbosa</p>
+
+                    <h4 class="text-xl font-bold text-dark mt-8 mb-4">Qué incluye:</h4>
+                    <ul class="list-disc pl-5 space-y-2 marker:text-secondary">
+                        <li>Recetas dulces y saladas</li>
+                        <li>Preparaciones simples y accesibles</li>
+                        <li>Pensado para cuidar la microbiota</li>
+                        <li>Material en formato digital</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="text-center md:text-left">
+                        <p class="text-sm text-secondary mb-1">Precio final</p>
+                        <p class="text-3xl font-bold text-dark">$5.000 <span class="text-base font-normal text-secondary">ARS</span></p>
+                    </div>
+                    <!-- Link de Mercado Pago del Recetario -->
+                    <a href="https://mpago.la/2BSysPP" target="_blank" class="w-full md:w-auto px-8 py-4 bg-secondary text-white rounded-xl font-bold hover:bg-[#8ca58f] transition shadow-lg text-center">
+                        Comprar Recetario
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="py-12 text-center text-secondary text-sm border-t border-gray-100 bg-white">
+        <p class="mb-2">&copy; 2026 Alimentación Consciente.</p>
+        <p class="text-xs text-gray-400">Diseñado con simplicidad.</p>
+    </footer>
+
+    <script>
+        // Lógica del Preloader
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            const body = document.body;
+            
+            // Un pequeño retraso para asegurar que se vea el logo
+            setTimeout(() => {
+                preloader.classList.add('fade-out');
+                body.classList.remove('overflow-hidden'); // Permitir scroll
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 700); // Tiempo igual a la duración de la transición CSS
+            }, 1200);
+        });
+
+        function showSection(id) {
+            // Ocultar todas las secciones
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            // Mostrar la seleccionada
+            document.getElementById(id).classList.add('active');
+            
+            // Actualizar el estado activo del menú
+            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+            if (id === 'home') {
+                document.getElementById('nav-home').classList.add('active');
+            } else {
+                document.getElementById('nav-productos').classList.add('active');
+            }
+
+            // Scroll suave arriba
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
