@@ -172,48 +172,24 @@
                         </button>
                     </div>
 
-                </div>
-            </div>
-        </div>
-
-        <!-- SECCIÓN: CONTACTO & INFO -->
-        <div id="contacto" class="section">
-            <div class="max-w-2xl mx-auto px-6 py-12">
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl font-bold text-dark mb-4">Información & Contacto</h2>
-                    <p class="text-secondary text-lg">Estoy aquí para acompañarte</p>
-                </div>
-
-                <div class="bg-white rounded-3xl p-8 shadow-md border border-gray-100 relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary/30 to-secondary/30"></div>
-
-                    <div class="mb-10 text-center">
-                        <div class="inline-flex items-center justify-center w-12 h-12 bg-gray-50 rounded-full mb-4 text-2xl">
-                            🌍
+                    <!-- Tarjeta Producto 4: Fermentos (NUEVO) -->
+                    <div class="bg-white p-6 md:p-8 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition duration-300 flex flex-col relative overflow-hidden">
+                        <!-- Badge Descuento -->
+                        <div class="absolute top-4 right-4 bg-[#E57373] text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full z-10 shadow-md tracking-wide animate-pulse">
+                            25% OFF · ¡APROVÉCHALO!
                         </div>
-                        <h3 class="text-xl font-bold text-dark mb-3">¿Estás fuera de Argentina?</h3>
-                        <p class="text-body leading-relaxed">
-                            Si querés acceder a los materiales pero no tenés pesos argentinos, no te preocupes. 
-                            <strong>Escribime y vemos la mejor forma de compra para vos</strong> (PayPal, Western Union, etc).
-                        </p>
+
+                        <div class="h-48 rounded-xl mb-6 overflow-hidden">
+                            <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1773858967/fermentos_caseros_imagen_lprjsx.png" alt="E-book Fermentos Caseros" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://via.placeholder.com/400x300?text=Fermentos'">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-dark">E-book Fermentos Caseros</h3>
+                        <p class="text-body mb-8 leading-relaxed flex-grow text-sm md:text-base">Una guía simple para empezar a crear comida viva en tu propia cocina usando ingredientes básicos.</p>
+                        <button onclick="showSection('producto4')" class="w-full py-3 rounded-lg border border-primary text-primary font-semibold hover:bg-primary hover:text-white transition flex justify-center items-center group">
+                            Ver detalles 
+                            <span class="ml-2 group-hover:translate-x-1 transition">→</span>
+                        </button>
                     </div>
 
-                    <div class="w-full h-px bg-gray-100 my-8"></div>
-
-                    <div class="text-center">
-                        <div class="inline-flex items-center justify-center w-12 h-12 bg-gray-50 rounded-full mb-4 text-2xl">
-                            💬
-                        </div>
-                        <h3 class="text-xl font-bold text-dark mb-3">Dudas o Acompañamiento</h3>
-                        <p class="text-body leading-relaxed mb-8">
-                            Ante cualquier consulta, o si querés contarme cómo venís con tu proceso y sentís que necesitás acompañamiento, estoy para escucharte.
-                        </p>
-                        
-                        <a href="https://www.instagram.com/raizconsciente_nutricion" target="_blank" class="block w-full md:w-auto md:inline-flex items-center justify-center px-8 py-4 bg-primary text-white rounded-xl font-bold hover:bg-[#4a6353] transition shadow-lg shadow-primary/20 gap-2 group mx-auto">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:scale-110 transition"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                            Escribime en Instagram
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -341,8 +317,8 @@
             </div>
         </div>
 
-        <!-- DETALLE: MINI GUIA (PRODUCTO 3) -->
-        <div id="producto3" class="section max-w-3xl mx-auto px-6 py-8 md:py-12">
+        <!-- DETALLE: FERMENTOS CASEROS (PRODUCTO 4) -->
+        <div id="producto4" class="section max-w-3xl mx-auto px-6 py-8 md:py-12">
             <button onclick="showSection('productos-lista')" class="mb-8 flex items-center text-secondary hover:text-primary transition font-medium">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -351,29 +327,22 @@
             </button>
             
             <div class="bg-white rounded-3xl p-6 md:p-12 shadow-md border border-gray-100 relative overflow-hidden">
-                <!-- Badge Regalo -->
-                <div class="absolute top-6 right-6 bg-primary text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full z-10 shadow-md tracking-wide">
-                    🎁 INCLUYE KIT IMPRIMIBLE
+                <!-- Badge Descuento -->
+                <div class="absolute top-6 right-6 bg-[#E57373] text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full z-10 shadow-md tracking-wide animate-pulse">
+                    25% OFF · ¡APROVÉCHALO!
                 </div>
 
-                <span class="text-secondary font-bold tracking-wide text-xs md:text-sm uppercase">Recurso Práctico</span>
-                <h2 class="text-3xl md:text-4xl mt-2 mb-6 text-dark leading-tight">Mini Guía – Primeros pasos para una Alimentación Consciente</h2>
+                <span class="text-secondary font-bold tracking-wide text-xs md:text-sm uppercase">E-book Digital</span>
+                <h2 class="text-3xl md:text-5xl mt-2 mb-6 text-dark leading-tight">E-book: Fermentos Caseros</h2>
                 
                 <div class="rounded-xl overflow-hidden mb-8 shadow-sm">
-                    <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1771884469/mini_guia_fnlu4i.jpg" alt="Portada Mini Guía" class="w-full object-cover" onerror="this.src='https://via.placeholder.com/600x400?text=Mini+Guía'">
+                    <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1773858967/fermentos_caseros_imagen_lprjsx.png" alt="E-book Fermentos" class="w-full object-cover" onerror="this.src='https://via.placeholder.com/600x400?text=Fermentos'">
                 </div>
 
                 <div class="prose prose-stone prose-lg text-body leading-relaxed mb-10 text-sm md:text-base space-y-4">
-                    <p class="font-semibold text-lg text-primary">Un recurso práctico para comenzar a ordenar tu alimentación desde la conciencia y la organización.</p>
-                    <p>Esta mini guía está pensada para darte los primeros lineamientos sin abrumarte. Vas a encontrar pasos simples y aplicables para tu día a día, permitiéndote construir hábitos reales.</p>
-                    
-                    <div class="bg-secondary/10 border border-secondary/20 p-5 rounded-xl mt-6">
-                        <p class="font-bold text-dark flex items-center gap-2 mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd" /></svg>
-                            ¡De Regalo!
-                        </p>
-                        <p class="text-sm">Con la compra de esta guía, recibís un <strong>Kit Imprimible de regalo</strong> exclusivo para ayudarte en tu organización.</p>
-                    </div>
+                    <p class="font-semibold text-lg text-primary">En este e-book vas a aprender a preparar fermentos simples en casa usando ingredientes básicos.</p>
+                    <p>Incluye consejos prácticos para evitar errores comunes a la hora de fermentar.</p>
+                    <p class="italic text-secondary font-medium">Una guía simple para empezar a crear comida viva en tu propia cocina.</p>
                 </div>
 
                 <div class="mb-8 p-5 bg-secondary/10 border border-secondary/30 rounded-xl text-body text-sm leading-relaxed">
@@ -391,20 +360,18 @@
 
                 <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col md:flex-row items-center justify-between gap-6">
                     <div class="text-center md:text-left">
-                        <p class="text-sm text-secondary mb-1">Precio final</p>
-                        <p class="text-3xl font-bold text-dark">$4.900 <span class="text-base font-normal text-secondary">ARS</span></p>
+                        <p class="text-sm text-secondary mb-1">Inversión</p>
+                        <!-- REEMPLAZAR PRECIO -->
+                        <p class="text-3xl font-bold text-dark">$8.900 <span class="text-base font-normal text-secondary">ARS</span></p>
                     </div>
-                    <a href="https://mpago.la/2vGj1MJ" target="_blank" class="w-full md:w-auto px-8 py-4 bg-primary text-white rounded-xl font-bold hover:bg-[#4a6353] transition shadow-lg text-center">
-                        Comprar Mini Guía
+                    <a href="https://mpago.la/16UKDBy" target="_blank" class="w-full md:w-auto px-8 py-4 bg-primary text-white rounded-xl font-bold hover:bg-[#4a6353] transition shadow-lg text-center">
+                        Comprar E-book
                     </a>
                 </div>
             </div>
         </div>
 
-    </div>
-
-    <footer class="py-12 text-center text-secondary text-sm border-t border-gray-100 bg-white">
-        <p class="mb-2">&copy; 2026 Alimentación Consciente.</p>
+        <!-- SECCIÓN: GRACIAS POR TU COMPRA (PAGO EXITOSO) -->
         <p class="text-xs text-gray-400">Diseñado con simplicidad.</p>
     </footer>
 
@@ -423,18 +390,20 @@
 
     <script>
         // Lógica del Preloader
-        window.addEventListener('load', function() {
+        document.addEventListener('DOMContentLoaded', function() {
             const preloader = document.getElementById('preloader');
             const body = document.body;
             
             // Un pequeño retraso para asegurar que se vea el logo
             setTimeout(() => {
-                preloader.classList.add('fade-out');
-                body.classList.remove('overflow-hidden'); // Permitir scroll
-                setTimeout(() => {
-                    preloader.style.display = 'none';
-                }, 700); // Tiempo igual a la duración de la transición CSS
-            }, 1200);
+                if(preloader) {
+                    preloader.classList.add('fade-out');
+                    body.classList.remove('overflow-hidden'); // Permitir scroll
+                    setTimeout(() => {
+                        preloader.style.display = 'none';
+                    }, 700); // Tiempo igual a la duración de la transición CSS
+                }
+            }, 600); // Reduje el tiempo para que sea más ágil
         });
 
         function showSection(id) {
@@ -448,7 +417,7 @@
             if (id === 'home') {
                 const navHome = document.getElementById('nav-home');
                 if(navHome) navHome.classList.add('active');
-            } else if (id === 'productos-lista' || id === 'producto1' || id === 'producto2' || id === 'producto3') {
+            } else if (id === 'productos-lista' || id === 'producto1' || id === 'producto2' || id === 'producto3' || id === 'producto4') {
                 const navProd = document.getElementById('nav-productos');
                 if(navProd) navProd.classList.add('active');
             } else if (id === 'contacto') {
